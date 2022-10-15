@@ -1,0 +1,31 @@
+.headerText{
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+}
+
+.productsList {
+  margin: auto;
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.productsListTitle{
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    display: none;
+}
+
+.productsListTitle :first-child{
+    flex: 1;
+}
+
+.productsListTitle :nth-child(2) , .productsListTitle :last-child{
+    width: 20%;
+}
+
+@media screen and (min-width:640px) {
+    .productsListTitle{
+        display: flex;
+    }
+}
