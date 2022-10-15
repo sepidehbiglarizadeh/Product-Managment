@@ -1,11 +1,12 @@
-import "./App.css"
+import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import ProductsProvider from "./components/Provider/ProductsProvider";
 
 const App = () => {
   return (
-    <div className="app">
-      <Navbar/>
-    </div>
+    <ProductsProvider>
+      <Navbar />
+    </ProductsProvider>
   );
 };
 

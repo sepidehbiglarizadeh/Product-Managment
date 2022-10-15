@@ -1,12 +1,30 @@
-.header {
-  font-size: 2rem;
-  background-color: #fce7f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+.header h1{
+  padding: 1rem;
 }
 
-.header h1 span {
-  font-size: 1.5rem;
+.container{
+  background-color: #d1d5db;
+}
+
+.content{
+  width: 65%;
+  background-color: #84cc16;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.content :first-child{
+  background-color: #166534;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width:640px) {
+  .content{
+    width: 30%;
+  }
 }

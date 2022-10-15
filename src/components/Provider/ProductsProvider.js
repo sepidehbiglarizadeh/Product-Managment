@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { useReducer } from "react";
+import React, { useContext, useReducer } from "react";
 import { productsData } from "../../db/products";
 
 const ProductsContext = React.createContext();
