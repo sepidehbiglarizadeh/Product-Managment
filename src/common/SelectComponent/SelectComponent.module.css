@@ -1,11 +1,12 @@
 .select{
     width: 190px;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .selectContainer{
     display: flex;
     align-items: center;
+    margin-left: 1.5rem;
 }
 
 .selectContainer span{

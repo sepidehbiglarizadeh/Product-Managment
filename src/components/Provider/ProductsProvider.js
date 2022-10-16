@@ -1,5 +1,6 @@
 import React, { useContext, useReducer } from "react";
 import { productsData } from "../../db/products";
+import _ from "lodash";
 
 const ProductsContext = React.createContext();
 const ProductsContextDispatcher = React.createContext();
@@ -37,7 +38,7 @@ const reducer = (state, action) => {
     case "search": {
       const value = action.event.target.value;
       if (value === "") {
-        return productsData;
+        return state;
       } else {
         const filteredProducts = state.filter((p) =>
           p.title.toLowerCase().includes(value.toLowerCase())
@@ -55,6 +56,16 @@ const reducer = (state, action) => {
           (p) => p.category.toLocaleLowerCase() === value.toLocaleLowerCase()
         );
         return filteredProducts;
+      }
+    }
+
+    case "sort":{
+      const value = action.selectedOption.value;
+      const products = [...state];
+      if (value === "Highest") {
+        return _.orderBy(products, ["price"], "desc");
+      } else {
+        return _.orderBy(products, ["price"], "asc");
       }
     }
 

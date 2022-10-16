@@ -9,3 +9,7 @@
 .searchBar input:focus {
   border: 2px solid #84cc16;
 }
+
+.searchBar label{
+  font-weight: bold;
+}
