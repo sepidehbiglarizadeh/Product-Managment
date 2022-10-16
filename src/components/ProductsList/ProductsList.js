@@ -28,6 +28,9 @@ const ProductsList = () => {
               onIncrement={() =>
                 dispatch({ type: "increment", id: product.id })
               }
+              onDecrement={() =>
+                dispatch({ type: "decrement", id: product.id })
+              }
             />
           );
         })}
