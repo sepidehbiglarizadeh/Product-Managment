@@ -2,7 +2,14 @@
   padding: 1rem;
 }
 
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container{
+  margin-top: 1rem;
   background-color: #d1d5db;
 }
 

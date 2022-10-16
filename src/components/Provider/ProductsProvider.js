@@ -34,6 +34,18 @@ const reducer = (state, action) => {
       return filteredProducts;
     }
 
+    case "search": {
+      const value = action.event.target.value;
+      if (value === "") {
+        return productsData;
+      } else {
+        const filteredProducts = state.filter((p) =>
+          p.title.toLowerCase().includes(value.toLowerCase())
+        );
+        return filteredProducts;
+      }
+    }
+
     default:
       return state;
   }

@@ -9,7 +9,7 @@ const ProductsList = () => {
   if (products.length === 0) return <div>Your Cart Is Empty</div>;
 
   return (
-    <>
+    <div>
       <h2 className={styles.headerText}>
         You Have {products.filter((p) => p.quantity > 0).length} Item In Your
         Cart
@@ -36,7 +36,7 @@ const ProductsList = () => {
           );
         })}
       </section>
-    </>
+    </div>
   );
 };
 
