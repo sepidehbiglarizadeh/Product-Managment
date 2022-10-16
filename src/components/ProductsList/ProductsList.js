@@ -31,6 +31,7 @@ const ProductsList = () => {
               onDecrement={() =>
                 dispatch({ type: "decrement", id: product.id })
               }
+              onDelete={() => dispatch({ type: "remove", id: product.id })}
             />
           );
         })}

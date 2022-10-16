@@ -29,6 +29,11 @@ const reducer = (state, action) => {
       }
     }
 
+    case "remove": {
+      const filteredProducts = state.filter((item) => item.id !== action.id);
+      return filteredProducts;
+    }
+
     default:
       return state;
   }
