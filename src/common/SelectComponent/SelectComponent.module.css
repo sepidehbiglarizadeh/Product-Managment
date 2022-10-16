@@ -1,0 +1,14 @@
+.select{
+    width: 190px;
+    margin-top: 1rem;
+}
+
+.selectContainer{
+    display: flex;
+    align-items: center;
+}
+
+.selectContainer span{
+    margin-right: 1rem;
+    font-weight: bold;
+}

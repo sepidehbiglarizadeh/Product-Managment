@@ -1,4 +1,10 @@
 .filterContainer{
     margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
 }
+
+
 

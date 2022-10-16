@@ -3,6 +3,7 @@
   border-radius: 5px;
   border: 1px solid #c9c9c9;
   outline: none;
+  margin-top: 1rem;
 }
 
 .searchBar input:focus {
