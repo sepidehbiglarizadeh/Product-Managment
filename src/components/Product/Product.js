@@ -3,7 +3,7 @@ import { BiTrash } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
 
 
-const Product = ({ product }) => {
+const Product = ({ product,onIncrement }) => {
   return (
     <div className={styles.productContainer}>
       <div className={styles.productContent}>
@@ -24,7 +24,7 @@ const Product = ({ product }) => {
             {product.quantity > 1 ? "-" : <BiTrash />}
           </button>
           <span>{product.quantity}</span>
-          <button className={styles.incrementBtn}>+</button>
+          <button className={styles.incrementBtn} onClick={onIncrement}>+</button>
         </div>
         <span>${product.price}</span>
         <button className={styles.removeBtn}><IoIosClose size={30}/></button>

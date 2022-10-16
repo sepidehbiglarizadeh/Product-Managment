@@ -1,9 +1,10 @@
 import Product from "../Product/Product";
-import { useProducts } from "../Provider/ProductsProvider";
+import { useProducts, useProductsActions } from "../Provider/ProductsProvider";
 import styles from "./ProductsList.module.css";
 
 const ProductsList = () => {
   const products = useProducts();
+  const dispatch = useProductsActions();
 
   if (products.length === 0) return <div>Your Cart Is Empty</div>;
 
@@ -15,13 +16,19 @@ const ProductsList = () => {
       </h2>
       <section className={styles.productsList}>
         <ul className={styles.productsListTitle}>
-            <li>Product</li>
-            <li>Quantity</li>
-            <li>Price</li>
+          <li>Product</li>
+          <li>Quantity</li>
+          <li>Price</li>
         </ul>
         {products.map((product) => {
           return (
-            <Product product={product} key={product.id}/>
+            <Product
+              product={product}
+              key={product.id}
+              onIncrement={() =>
+                dispatch({ type: "increment", id: product.id })
+              }
+            />
           );
         })}
       </section>
